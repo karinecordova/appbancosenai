@@ -17,7 +17,12 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
+      title: 'Listar Pessoas',
+      url: '/list-pessoas',
+      icon: 'list'
+    },
+    {
+      title: 'Cadastrar Pessoas',
       url: '/list',
       icon: 'list'
     }

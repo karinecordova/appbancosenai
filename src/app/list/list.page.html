@@ -4,24 +4,22 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Cadastrar Pessoas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+    <ion-list>
+        <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" name="nome" [(ngModel)]="data.nome"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="text" name="email" [(ngModel)]="data.email"></ion-input>
+          </ion-item>
+        
+        <ion-button full (click)="submit()">Cadastrar</ion-button>
+        </ion-list>
 </ion-content>
